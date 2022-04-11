@@ -7,12 +7,13 @@
  */
 
 // Bibliotecas
-#include <Serial.h> //No agregar. Esta linea es solamente ilustrativa
+//#include <Serial.h> //No agregar. Esta linea es solamente ilustrativa
 
 // Constantes
 
 // Variables
 int dato = 0;
+double timeStart, timeFinish;
 
 // Definición de objetos
 
@@ -28,19 +29,45 @@ void setup() {// Inicio de void setup ()
 void loop() {// Inicio de void loop
   // put your main code here, to run repeatedly:
   
+  // Codigo con comparaciones
+  timeStart = micros ();
+  
+    // Ejecuta ciclo n veces 
+  for (int i = 0; i < 10000; i++){
+    
   // dato = dato + 1; //Forma alternativa
   dato++;
 
   //Contador de anillo con comparaciones
   if (dato > 8) {
     dato = 0;
+   }
   }
 
-  //Contador de anillo con operador
-  // dato %= 8;
+timeFinish = micros ();
 
-  Serial.println (dato); //Muestra en monitor serial el valor de la variable
-  delay (1000);
+   Serial.print ("con comparaciones");
+   Serial.println (timeFinish - timeStart); //Manda al monitor serial la diferencia entre variables de tiempo
+    delay(10000);
+
+  //Codigo con operadores
+  timeStart = micros ();
+  
+    // Ejecuta ciclo n veces 
+  for (int i = 0; i < 10000; i++){
+    
+  // dato = dato + 1; //Forma alternativa
+  dato++;
+
+  //Contador de anillo con operador
+     dato %= 8;
+     }
+
+timeFinish = micros ();
+
+   Serial.print ("con operadores");
+   Serial.println (timeFinish - timeStart); //Manda al monitor serial la diferencia entre variables de tiempo
+    delay(10000);   
 
 }// Fin de void loop
 
