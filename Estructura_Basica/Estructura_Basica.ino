@@ -1,7 +1,7 @@
 /*
  * Estructura básica
- * Por: Hugo Vargas
- * Fecha: 28 de junio de 2021
+ * Por: Ulises Lujan
+ * Fecha: 11 de Abril de 2021
  * 
  * Esto es una muestra de la estructura básica de un programa
  */
