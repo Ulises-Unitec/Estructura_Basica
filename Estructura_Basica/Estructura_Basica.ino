@@ -1,7 +1,7 @@
 /*
  * Estructura básica
  * Por: Ulises Lujan
- * Fecha: 11 de Abril de 2021
+ * Fecha: 11 de Abril de 2022
  * 
  * Esto es una muestra de la estructura básica de un programa
  */
